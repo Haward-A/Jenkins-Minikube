@@ -19,7 +19,8 @@
 
 # Access your application using Ingress resource
 1. To deploy the Ingress manifest file, make sure you enable/install the Ingress controller is your cluster
-   - Make sure the minikube ip address is mapped in your machine `hosts` file with any name of your choice
+   - Make sure the minikube ip address is mapped in your machine `hosts` file with any name of your choice (I chose *minikube.local*)
+     - To get the ip address of your minikube host: `minikube ip`
    - If your are in Minikube: `minikube addons list` and `minikube addons enable ingress` to enable it if it shows *disabled*.
 
    ```table
@@ -62,7 +63,7 @@
    | volumesnapshots             | minikube | disabled     | Kubernetes                     |
    |-----------------------------|----------|--------------|--------------------------------|
    ```
-   
+
 1. The ingress controller gets installed in the cluster as a pod in the `ingress-nginx` namespace
   - Use: `kubectl get pods --namespace ingress-nginx` to see it.
 
