@@ -11,16 +11,17 @@
 
 1. Install your `kubernetes cloud` from the Jenkins dashboard
    - `Manage Jenkins` -> `Manage Nodes and  Clouds` -> `Configure Clouds` -> `Add a new cloud (Kuberenetes)` -> `Kubernetes Cloud details` -> `WebSocket`
-   
+
    - Test your connection by clicking on `Test Connection`
-      - Message: `Connection to Kuberntes v1.26.1` should appear
+      - Message: `Connection to Kuberntes v1.xx.x` should appear
 
    - You may if you want, define the pod template to use during your Jenkins deployment
 
 # Access your application using Ingress resource
 1. To deploy the Ingress manifest file, make sure you enable/install the Ingress controller is your cluster
    - Make sure the minikube ip address is mapped in your machine `hosts` file with any name of your choice
-   - If your are in Minikube: `minikube addons list` and `minikube addons enable ingress` to enable it if it shows *disabled*
+   - If your are in Minikube: `minikube addons list` and `minikube addons enable ingress` to enable it if it shows *disabled*.
+
    ```table
    |-----------------------------|----------|--------------|--------------------------------|
    |         ADDON NAME          | PROFILE  |    STATUS    |           MAINTAINER           |
@@ -61,6 +62,7 @@
    | volumesnapshots             | minikube | disabled     | Kubernetes                     |
    |-----------------------------|----------|--------------|--------------------------------|
    ```
+   
 1. The ingress controller gets installed in the cluster as a pod in the `ingress-nginx` namespace
   - Use: `kubectl get pods --namespace ingress-nginx` to see it.
 
