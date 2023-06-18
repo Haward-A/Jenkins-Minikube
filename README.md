@@ -16,6 +16,8 @@
       - Message: `Connection to Kuberntes v1.xx.x` should appear
 
    - You may if you want, define the pod template to use during your Jenkins deployment
+   
+1. Some Jenkins pipelines examples for K8S can be found here -> https://github.com/jenkinsci/kubernetes-plugin
 
 # Access your application using Ingress resource
 1. To deploy the Ingress manifest file, make sure you enable/install the Ingress controller is your cluster
@@ -67,11 +69,9 @@
 1. The ingress controller gets installed in the cluster as a pod in the `ingress-nginx` namespace
   - Use: `kubectl get pods --namespace ingress-nginx` to see it.
 
-      ```sh
-      NAME                                       READY   STATUS      RESTARTS        AGE
-      ingress-nginx-admission-create-bnhv7       0/1     Completed   0               27h
-      ingress-nginx-admission-patch-sgpzb        0/1     Completed   1               27h
-      ingress-nginx-controller-77669ff58-hm7tl   1/1     Running     1 (7h16m ago)   27h
-      ```
-
-1. Some Jenkins pipelines examples for K8S can be found here -> https://github.com/jenkinsci/kubernetes-plugin
+   ```sh
+   NAME                                       READY   STATUS      RESTARTS        AGE
+   ingress-nginx-admission-create-bnhv7       0/1     Completed   0               27h
+   ingress-nginx-admission-patch-sgpzb        0/1     Completed   1               27h
+   ingress-nginx-controller-77669ff58-hm7tl   1/1     Running     1 (7h16m ago)   27h
+   ```
