@@ -73,3 +73,5 @@
    ingress-nginx-admission-patch-sgpzb        0/1     Completed   1               27h
    ingress-nginx-controller-77669ff58-hm7tl   1/1     Running     1 (7h16m ago)   27h
   ```
+
+1. Some Jenkins pipelines example for K8S can be found here -> https://github.com/jenkinsci/kubernetes-plugin
