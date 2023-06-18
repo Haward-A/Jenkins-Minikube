@@ -9,9 +9,8 @@ metadata:
       prometheus.io/port:   '8080'
 spec:
   selector: 
-    app: jenkins-server
-  type: NodePort  
+    app: jenkins-server  
   ports:
-    - port: 8080
+    - name: jenkinssvc
+      port: 8080
       targetPort: 8080
-      nodePort: 32000
